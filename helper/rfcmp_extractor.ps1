@@ -72,7 +72,7 @@ If($type[1] -eq "Locations")
     #
     $ARGUMENTS="-q -x""$FILE"" *.gdb -o""$TMPDIR"""
     #echo "Argumente fuer modmgr.exe zur Suche gdb Dateien "$ARGUMENTS
-    start-process -FilePath "$RF2INSTALLDIR\bin64\ModMgr.exe" -ArgumentList $ARGUMENTS -Wait -WindowStyle hidden|out-null
+    start-process -FilePath "$RF2ROOT\bin64\ModMgr.exe" -ArgumentList $ARGUMENTS -Wait -WindowStyle hidden|out-null
      
        # wir lesen die Dateinamen der gdb Dateien ein
        #
@@ -98,9 +98,9 @@ If($type[1] -eq "Locations")
  timeout /t 1 |out-null
 }
 
-# Wechsel nach $RF2INSTALLDIRDIR\Installed
+# Wechsel nach $RF2ROOTDIR\Installed
 # 
-cd $RF2INSTALLDIR\Installed
+cd $RF2ROOT\Installed
 
 # type directories muessen vorher existieren ... 
 #

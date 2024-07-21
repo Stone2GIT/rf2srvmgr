@@ -46,7 +46,7 @@ UDP 64299
 
 - Get the latest release from https://github.com/GITStone-tech/rf2srvmgr/archive/refs/tags/ and extract it to your user folder ($HOME) - rename the folder to **rf2srvmgr** (this is currently a *must*).
 
-2. adjust variables_source_file.ps1 (or take it as it is)
+2. adjust variables.ps1 (or take it as it is)
 
 3. open powershell and run installscript
 

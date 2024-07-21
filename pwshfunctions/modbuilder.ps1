@@ -4,7 +4,7 @@
 # Author: Dietmar Stein, info@simracingjustfair.org
 #
 
-. $HOME\rf2srvmgr\variables_source_file.ps1
+. $HOME\rf2srvmgr\variables.ps1
 
 $statusLabel.Text = "Please wait until finished ..."
 
@@ -66,8 +66,8 @@ $listBox1.Font = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 $listBox1.SelectionMode = 'MultiExtended'
 
 # items for choice
-$INSTALLEDCARS=(Get-ChildItem -Directory $RF2INSTALLDIR\Installed\Vehicles\| Select-Object -Expand Name | select-string -Pattern "CorvetteC6_PC" -notmatch | sort)
-$INSTALLEDTRACKS=(Get-ChildItem -Directory $RF2INSTALLDIR\Installed\Locations\| Select-Object -Expand Name | sort)
+$INSTALLEDCARS=(Get-ChildItem -Directory $RF2ROOT\Installed\Vehicles\| Select-Object -Expand Name | select-string -Pattern "CorvetteC6_PC" -notmatch | sort)
+$INSTALLEDTRACKS=(Get-ChildItem -Directory $RF2ROOT\Installed\Locations\| Select-Object -Expand Name | sort)
 
 @($INSTALLEDCARS) | ForEach-Object {[void] $listBox.Items.Add($_)}
 @($INSTALLEDTRACKS) | ForEach-Object {[void] $listBox1.Items.Add($_)}

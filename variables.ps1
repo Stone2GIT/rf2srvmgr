@@ -9,40 +9,36 @@
 
 #
 # Working directory
-#$WORKDIR=$pwd.Path
-$WORKDIR="$HOME\rf2srvmgr"
-$RF2SRVMGRDIR="$WORKDIR"
+$CURRENTLOCATION=((Get-Location).Path)
 
 # 
 # Steam and rF2 related
-$STEAMINSTALLDIR="C:\Users\srjfmundd\SteamCMD"
-$RF2INSTALLDIR="C:\Users\srjfmundd\SteamCMD\steamapps\rFactor2DS"
+$STEAMINSTALLDIR="$CURRENTLOCATION\SteamCMD"
+$RF2ROOT="$HOME\rf2ds"
 $RF2BETAVERSION="none"
 
 #
 # car and track locations
-$RF2VEH=$RF2INSTALLDIR+"Installed\Vehicles"
-$RF2LOC=$RF2INSTALLDIR+"Installed\Locations"
+$RF2VEH=$RF2ROOT+"Installed\Vehicles"
+$RF2LOC=$RF2ROOT+"Installed\Locations"
 
 #
 # QuickBMS related
-$QUICKDIR="$RF2SRVMGRDIR\QuickBMS"
+$QUICKDIR="$CURRENTLOCATION\QuickBMS"
 $TMPDIR="$QUICKDIR\tmp"
 
 #
 # CSV and JSON files etc.
-$CSVCARFILE="$RF2SRVMGRDIR\csvfiles\paid_cars.csv"
-$CSVTRACKFILE="$RF2SRVMGRDIR\csvfiles\paid_tracks.csv"
+$CSVCARFILE="$CURRENTLOCATION\csvfiles\paid_cars.csv"
+$CSVTRACKFILE="$CURRENTLOCATION\csvfiles\paid_tracks.csv"
 
-$CSVCONTENTFILE="$RF2SRVMGRDIR\csvfiles\content.csv"
-$JSONCONTENTFILE="$RF2SRVMGRDIR\csvfiles\content.json"
+$CSVCONTENTFILE="$CURRENTLOCATION\csvfiles\content.csv"
+$JSONCONTENTFILE="$CURRENTLOCATION\csvfiles\content.json"
 
 #
 # historic ... get rid of it ...
-#$BASELW="c:\"
-$RFACTORDIR="$RF2INSTALLDIR"
-$RFACTORCONTENT="$RF2INSTALLDIR\Installed"
+$RFACTORDIR="$RF2ROOT"
+$RFACTORCONTENT="$RF2ROOT\Installed"
 
-$STEAMLW="d:"
-$STEAMCONTENT="$STEAMLW\workshop\content\365960"
-$PACKAGESDIR="$STEAMLW\common\rFactor 2\Packages"
+$STEAMCONTENT="$RF2ROOT\steamapps\workshop\content\365960"
+$PACKAGESDIR="$RF2ROOT\Packages"

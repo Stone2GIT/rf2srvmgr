@@ -113,7 +113,7 @@ ForEach($CSVCARENTRY in Import-CSV $CSVCARFILE)
       start-process "$STEAMINSTALLDIR\steamcmd" -ArgumentList $ARGUMENTS -NoNewWindow -wait
       #
       # extract and install ...
-      & $RF2SRVMGRDIR\helper\rfcmp_extractor.ps1 $STEAMID
+      & $CURRENTLOCATION\helper\rfcmp_extractor.ps1 $STEAMID
      }
    }
   }
@@ -143,7 +143,7 @@ ForEach($CSVTRACKENTRY in Import-CSV $CSVTRACKFILE)
       start-process "$STEAMINSTALLDIR\steamcmd" -ArgumentList $ARGUMENTS -NoNewWindow -wait
       #
       # extract and install ...
-      & $RF2SRVMGRDIR\helper\rfcmp_extractor.ps1 $STEAMID
+      & $CURRENTLOCATION\helper\rfcmp_extractor.ps1 $STEAMID
      }
    }
   }

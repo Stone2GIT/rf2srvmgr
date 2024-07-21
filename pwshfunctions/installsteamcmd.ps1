@@ -8,7 +8,7 @@ $statusLabel.Text = "Please wait until finished ..."
         if ( "$STEAMINSTALLDIR" )
         {
 
-       if ("$STEAMINSTALLDIR" -eq "") { . "$RF2SRVMGRDIR\variables_source_file.ps1" }
+       if ("$STEAMINSTALLDIR" -eq "") { . "$CURRENTLOCATION\variables.ps1" }
 
     #ChooseInstallation "SteamCMD"
     
@@ -22,7 +22,7 @@ $statusLabel.Text = "Please wait until finished ..."
     $textBox.AppendText("`r`nExtracting SteamCMD.")
     start-process -FilePath powershell -ArgumentList "Expand-Archive -Force $STEAMINSTALLDIR\steamcmd.zip -DestinationPath ""$STEAMINSTALLDIR""" -NoNewWindow -Wait
 
-    (get-content "$RF2SRVMGRDIR\variables_source_file.ps1") -replace "STEAMINSTALLDIR=.*","STEAMINSTALLDIR=""$STEAMINSTALLDIR""" | set-content -Path "$RF2SRVMGRDIR\variables_source_file.ps1"
+    (get-content "$CURRENTLOCATION\variables.ps1") -replace "STEAMINSTALLDIR=.*","STEAMINSTALLDIR=""$STEAMINSTALLDIR""" | set-content -Path "$CURRENTLOCATION\variables.ps1"
     #Add-Content -Path $pwd\variables_source_file-neu.ps1 -Value "`$STEAMINSTALLDIR=""$STEAMINSTALLDIR""" -Encoding ASCII
 
     #start-process -FilePath powershell -ArgumentList "$STEAMINSTALLDIR\steamcmd +login anonymous +quit" -NoNewWindow -Wait

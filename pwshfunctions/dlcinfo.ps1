@@ -24,8 +24,8 @@ else {
 
 "Running $PSVersionTable"
 
-rm $RF2SRVMGRDIR\csvfiles\paid_cars.*
-rm $RF2SRVMGRDIR\csvfiles\paid_tracks.*
+rm $CURRENTLOCATION\csvfiles\paid_cars.*
+rm $CURRENTLOCATION\csvfiles\paid_tracks.*
 
 $textBox.AppendText("`r`n`r`nRequesting information from Steam.")
 
